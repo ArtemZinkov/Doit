@@ -7,21 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15E1F7BA43BBE82F7BBAB78A /* Pods_Doit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DE49D2814DE45FADA37050 /* Pods_Doit.framework */; };
 		594A35A2232AB33B001B0DBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A35A1232AB33B001B0DBD /* AppDelegate.swift */; };
-		594A35A4232AB33B001B0DBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A35A3232AB33B001B0DBD /* ViewController.swift */; };
-		594A35A7232AB33B001B0DBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594A35A5232AB33B001B0DBD /* Main.storyboard */; };
+		594A35A7232AB33B001B0DBD /* TaskList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594A35A5232AB33B001B0DBD /* TaskList.storyboard */; };
 		594A35A9232AB33C001B0DBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 594A35A8232AB33C001B0DBD /* Assets.xcassets */; };
 		594A35AC232AB33C001B0DBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594A35AA232AB33C001B0DBD /* LaunchScreen.storyboard */; };
+		594A35B5232AB419001B0DBD /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A35B4232AB419001B0DBD /* TaskListViewController.swift */; };
+		594A35BB232AB514001B0DBD /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A35BA232AB514001B0DBD /* TaskTableViewCell.swift */; };
+		594A35BE232AB6F8001B0DBD /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A35BD232AB6F8001B0DBD /* APIManager.swift */; };
+		594A35C1232AB72E001B0DBD /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A35C0232AB72E001B0DBD /* TaskModel.swift */; };
+		594A35C4232AB78B001B0DBD /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A35C3232AB78B001B0DBD /* UITableView.swift */; };
+		594A35C8232AB8BE001B0DBD /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A35C7232AB8BE001B0DBD /* Collection.swift */; };
+		594A35CB232ABBA1001B0DBD /* Task Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594A35CA232ABBA1001B0DBD /* Task Cell.xib */; };
+		594A35CD232AC6D7001B0DBD /* TaskListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A35CC232AC6D7001B0DBD /* TaskListModel.swift */; };
+		594A35D1232AD185001B0DBD /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594A35D0232AD185001B0DBD /* AuthorizationViewController.swift */; };
+		594A35D3232AD1AC001B0DBD /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594A35D2232AD1AC001B0DBD /* Authorization.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01DE49D2814DE45FADA37050 /* Pods_Doit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Doit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F4CC3A892F55A83830EBCE /* Pods-Doit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doit.release.xcconfig"; path = "Target Support Files/Pods-Doit/Pods-Doit.release.xcconfig"; sourceTree = "<group>"; };
 		594A359E232AB33B001B0DBD /* Doit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		594A35A1232AB33B001B0DBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		594A35A3232AB33B001B0DBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		594A35A6232AB33B001B0DBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		594A35A6232AB33B001B0DBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TaskList.storyboard; sourceTree = "<group>"; };
 		594A35A8232AB33C001B0DBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		594A35AB232AB33C001B0DBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		594A35AD232AB33C001B0DBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		594A35B4232AB419001B0DBD /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		594A35BA232AB514001B0DBD /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		594A35BD232AB6F8001B0DBD /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		594A35C0232AB72E001B0DBD /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		594A35C3232AB78B001B0DBD /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		594A35C7232AB8BE001B0DBD /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		594A35CA232ABBA1001B0DBD /* Task Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Task Cell.xib"; sourceTree = "<group>"; };
+		594A35CC232AC6D7001B0DBD /* TaskListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListModel.swift; sourceTree = "<group>"; };
+		594A35D0232AD185001B0DBD /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		594A35D2232AD1AC001B0DBD /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		916CA7672281B0BD3B3BDBF2 /* Pods-Doit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Doit.debug.xcconfig"; path = "Target Support Files/Pods-Doit/Pods-Doit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +51,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15E1F7BA43BBE82F7BBAB78A /* Pods_Doit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E1B20A456DA5313CE93B62C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				916CA7672281B0BD3B3BDBF2 /* Pods-Doit.debug.xcconfig */,
+				23F4CC3A892F55A83830EBCE /* Pods-Doit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		594A3595232AB33A001B0DBD = {
 			isa = PBXGroup;
 			children = (
 				594A35A0232AB33B001B0DBD /* Doit */,
 				594A359F232AB33B001B0DBD /* Products */,
+				2E1B20A456DA5313CE93B62C /* Pods */,
+				B15E2F13B10AA0F92F1261E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +89,87 @@
 		594A35A0232AB33B001B0DBD /* Doit */ = {
 			isa = PBXGroup;
 			children = (
+				594A35CF232AD133001B0DBD /* Authorization */,
+				594A35B6232AB4E1001B0DBD /* Task List */,
+				594A35B3232AB367001B0DBD /* Supporting Files */,
+			);
+			path = Doit;
+			sourceTree = "<group>";
+		};
+		594A35B3232AB367001B0DBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				594A35BC232AB6BC001B0DBD /* API Manager */,
+				594A35C2232AB777001B0DBD /* Extensions */,
 				594A35A1232AB33B001B0DBD /* AppDelegate.swift */,
-				594A35A3232AB33B001B0DBD /* ViewController.swift */,
-				594A35A5232AB33B001B0DBD /* Main.storyboard */,
 				594A35A8232AB33C001B0DBD /* Assets.xcassets */,
 				594A35AA232AB33C001B0DBD /* LaunchScreen.storyboard */,
 				594A35AD232AB33C001B0DBD /* Info.plist */,
 			);
-			path = Doit;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		594A35B6232AB4E1001B0DBD /* Task List */ = {
+			isa = PBXGroup;
+			children = (
+				594A35B4232AB419001B0DBD /* TaskListViewController.swift */,
+				594A35A5232AB33B001B0DBD /* TaskList.storyboard */,
+				594A35C9232ABB94001B0DBD /* Task Cell */,
+			);
+			path = "Task List";
+			sourceTree = "<group>";
+		};
+		594A35BC232AB6BC001B0DBD /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				594A35BD232AB6F8001B0DBD /* APIManager.swift */,
+				594A35BF232AB71B001B0DBD /* API Models */,
+			);
+			path = "API Manager";
+			sourceTree = "<group>";
+		};
+		594A35BF232AB71B001B0DBD /* API Models */ = {
+			isa = PBXGroup;
+			children = (
+				594A35C0232AB72E001B0DBD /* TaskModel.swift */,
+				594A35CC232AC6D7001B0DBD /* TaskListModel.swift */,
+			);
+			path = "API Models";
+			sourceTree = "<group>";
+		};
+		594A35C2232AB777001B0DBD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				594A35C3232AB78B001B0DBD /* UITableView.swift */,
+				594A35C7232AB8BE001B0DBD /* Collection.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		594A35C9232ABB94001B0DBD /* Task Cell */ = {
+			isa = PBXGroup;
+			children = (
+				594A35BA232AB514001B0DBD /* TaskTableViewCell.swift */,
+				594A35CA232ABBA1001B0DBD /* Task Cell.xib */,
+			);
+			path = "Task Cell";
+			sourceTree = "<group>";
+		};
+		594A35CF232AD133001B0DBD /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				594A35D0232AD185001B0DBD /* AuthorizationViewController.swift */,
+				594A35D2232AD1AC001B0DBD /* Authorization.storyboard */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		B15E2F13B10AA0F92F1261E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01DE49D2814DE45FADA37050 /* Pods_Doit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +179,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 594A35B0232AB33C001B0DBD /* Build configuration list for PBXNativeTarget "Doit" */;
 			buildPhases = (
+				E49E0F24D1A3C437F7A7A025 /* [CP] Check Pods Manifest.lock */,
 				594A359A232AB33A001B0DBD /* Sources */,
 				594A359B232AB33A001B0DBD /* Frameworks */,
 				594A359C232AB33A001B0DBD /* Resources */,
@@ -123,32 +232,66 @@
 			buildActionMask = 2147483647;
 			files = (
 				594A35AC232AB33C001B0DBD /* LaunchScreen.storyboard in Resources */,
+				594A35D3232AD1AC001B0DBD /* Authorization.storyboard in Resources */,
+				594A35CB232ABBA1001B0DBD /* Task Cell.xib in Resources */,
 				594A35A9232AB33C001B0DBD /* Assets.xcassets in Resources */,
-				594A35A7232AB33B001B0DBD /* Main.storyboard in Resources */,
+				594A35A7232AB33B001B0DBD /* TaskList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E49E0F24D1A3C437F7A7A025 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Doit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		594A359A232AB33A001B0DBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				594A35A4232AB33B001B0DBD /* ViewController.swift in Sources */,
+				594A35D1232AD185001B0DBD /* AuthorizationViewController.swift in Sources */,
+				594A35BE232AB6F8001B0DBD /* APIManager.swift in Sources */,
 				594A35A2232AB33B001B0DBD /* AppDelegate.swift in Sources */,
+				594A35C1232AB72E001B0DBD /* TaskModel.swift in Sources */,
+				594A35B5232AB419001B0DBD /* TaskListViewController.swift in Sources */,
+				594A35BB232AB514001B0DBD /* TaskTableViewCell.swift in Sources */,
+				594A35C8232AB8BE001B0DBD /* Collection.swift in Sources */,
+				594A35CD232AC6D7001B0DBD /* TaskListModel.swift in Sources */,
+				594A35C4232AB78B001B0DBD /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		594A35A5232AB33B001B0DBD /* Main.storyboard */ = {
+		594A35A5232AB33B001B0DBD /* TaskList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				594A35A6232AB33B001B0DBD /* Base */,
 			);
-			name = Main.storyboard;
+			name = TaskList.storyboard;
 			sourceTree = "<group>";
 		};
 		594A35AA232AB33C001B0DBD /* LaunchScreen.storyboard */ = {
@@ -280,11 +423,13 @@
 		};
 		594A35B1232AB33C001B0DBD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 916CA7672281B0BD3B3BDBF2 /* Pods-Doit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE5R4U2ZLM;
-				INFOPLIST_FILE = Doit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Doit/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,17 +437,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArtemZinkov.Doit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		594A35B2232AB33C001B0DBD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23F4CC3A892F55A83830EBCE /* Pods-Doit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JE5R4U2ZLM;
-				INFOPLIST_FILE = Doit/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Doit/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +457,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ArtemZinkov.Doit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
