@@ -1,0 +1,6 @@
+framework module Pods_Doit {
+  umbrella header "Pods-Doit-umbrella.h"
+
+  export *
+  module * { export * }
+}
