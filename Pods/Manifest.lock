@@ -7,17 +7,21 @@ PODS:
   - AppCenter/Core (2.2.0)
   - AppCenter/Crashes (2.2.0):
     - AppCenter/Core
+  - SwiftKeychainWrapper (3.4.0)
 
 DEPENDENCIES:
   - AppCenter
+  - SwiftKeychainWrapper
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AppCenter
+    - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   AppCenter: c809e69d93218b9861b4f8e54ded8dcf4d2131e7
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
 
-PODFILE CHECKSUM: 13798485e952abcdc2f272e3187d22dd0728c563
+PODFILE CHECKSUM: c5f0bcbc82961308d53dc709d3f6408ac5faee22
 
 COCOAPODS: 1.7.5

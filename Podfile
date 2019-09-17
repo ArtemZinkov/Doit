@@ -8,5 +8,5 @@ target 'Doit' do
   # Pods for Doit
 
   pod 'AppCenter'
-
+  pod 'SwiftKeychainWrapper'
 end

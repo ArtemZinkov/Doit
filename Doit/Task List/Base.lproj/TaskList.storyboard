@@ -13,34 +13,112 @@
         <!--My Tasks-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TaskListViewController" customModule="Doit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaskListViewController" id="BYZ-38-t0r" customClass="TaskListViewController" customModule="Doit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IWP-dx-hkH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IWP-dx-hkH">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="127" id="q18-Xf-r1o" customClass="TaskTableViewCell" customModule="Doit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="127"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q18-Xf-r1o" id="r7Z-Fy-btR">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="126.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBU-q4-7TU">
+                                                    <rect key="frame" x="19" y="0.0" width="338" height="86.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saT-N7-wQt">
+                                                    <rect key="frame" x="19" y="86.5" width="75" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="CEx-QV-BY2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seN-zA-8bg">
+                                                    <rect key="frame" x="94" y="86.5" width="94" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEd-Oi-REN">
+                                                    <rect key="frame" x="188" y="86.5" width="169" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="KEd-Oi-REN" secondAttribute="bottom" id="3IG-k5-xfB"/>
+                                                <constraint firstItem="KEd-Oi-REN" firstAttribute="height" secondItem="seN-zA-8bg" secondAttribute="height" id="3cm-DP-1zZ"/>
+                                                <constraint firstItem="saT-N7-wQt" firstAttribute="leading" secondItem="TBU-q4-7TU" secondAttribute="leading" id="4Gw-HA-NxJ"/>
+                                                <constraint firstItem="TBU-q4-7TU" firstAttribute="width" secondItem="r7Z-Fy-btR" secondAttribute="width" multiplier="0.9" id="Acj-Zg-Vio"/>
+                                                <constraint firstItem="saT-N7-wQt" firstAttribute="top" secondItem="TBU-q4-7TU" secondAttribute="bottom" id="PM9-gq-DLL"/>
+                                                <constraint firstItem="seN-zA-8bg" firstAttribute="height" secondItem="saT-N7-wQt" secondAttribute="height" id="Z66-Be-f9E"/>
+                                                <constraint firstItem="KEd-Oi-REN" firstAttribute="leading" secondItem="r7Z-Fy-btR" secondAttribute="centerX" id="ZJC-nC-mDB"/>
+                                                <constraint firstItem="KEd-Oi-REN" firstAttribute="trailing" secondItem="TBU-q4-7TU" secondAttribute="trailing" id="a8I-Cu-tNN"/>
+                                                <constraint firstAttribute="bottom" secondItem="saT-N7-wQt" secondAttribute="bottom" id="ab5-4s-r0s"/>
+                                                <constraint firstItem="seN-zA-8bg" firstAttribute="leading" secondItem="saT-N7-wQt" secondAttribute="trailing" id="bBY-XD-4OZ"/>
+                                                <constraint firstItem="TBU-q4-7TU" firstAttribute="top" secondItem="r7Z-Fy-btR" secondAttribute="top" id="cre-UU-f6a"/>
+                                                <constraint firstAttribute="bottom" secondItem="seN-zA-8bg" secondAttribute="bottom" id="f9D-wB-qak"/>
+                                                <constraint firstAttribute="centerX" secondItem="seN-zA-8bg" secondAttribute="trailing" id="gfk-lG-ETV"/>
+                                                <constraint firstItem="saT-N7-wQt" firstAttribute="width" secondItem="r7Z-Fy-btR" secondAttribute="width" multiplier="0.2" id="jab-zH-Jjj"/>
+                                                <constraint firstItem="TBU-q4-7TU" firstAttribute="centerX" secondItem="r7Z-Fy-btR" secondAttribute="centerX" id="yu8-kn-Ecn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="seN-zA-8bg" id="fA9-bE-K5A"/>
+                                            <outlet property="priorityLabel" destination="KEd-Oi-REN" id="89r-fH-hj0"/>
+                                            <outlet property="titleLabel" destination="TBU-q4-7TU" id="1os-gq-esv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="gaI-yk-ODm"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="brd-Sr-KAv"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9u-7b-YQG">
+                                <rect key="frame" x="314.5" y="721.5" width="62" height="62"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="t9u-7b-YQG" secondAttribute="height" multiplier="1:1" id="9QC-zB-VJi"/>
+                                </constraints>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTask" destination="BYZ-38-t0r" eventType="touchUpInside" id="h31-VC-em1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IWP-dx-hkH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0RW-xe-Piu"/>
+                            <constraint firstItem="t9u-7b-YQG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.15" id="0dN-OJ-VMs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="t9u-7b-YQG" secondAttribute="bottom" multiplier="1.1" id="9IZ-WQ-EMQ"/>
+                            <constraint firstItem="t9u-7b-YQG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="YR5-If-oLg"/>
                             <constraint firstItem="IWP-dx-hkH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dcS-5k-4Fa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IWP-dx-hkH" secondAttribute="bottom" id="fEN-Be-gqk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t9u-7b-YQG" secondAttribute="trailing" multiplier="1.1" id="hr1-g0-bUD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IWP-dx-hkH" secondAttribute="trailing" id="sTU-Xr-mlD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Tasks" id="Dez-gd-dok">
-                        <barButtonItem key="leftBarButtonItem" title="Reminder" id="Qbc-xb-6OH"/>
                         <barButtonItem key="rightBarButtonItem" title="Sort" id="pXi-k7-zgw"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="t9u-7b-YQG" id="MDt-hB-ZOh"/>
                         <outlet property="tableView" destination="IWP-dx-hkH" id="UHX-pP-bDw"/>
                     </connections>
                 </viewController>
@@ -58,6 +136,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hTt-dU-ulB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="llR-4h-njR"/>
                     </connections>
