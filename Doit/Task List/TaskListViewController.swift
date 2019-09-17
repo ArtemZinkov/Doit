@@ -16,6 +16,8 @@ final class TaskListViewController: UIViewController {
     private let refreshControl = UIRefreshControl()
     private var cellModels: [TaskModel] { return model?.tasks ?? [] }
     private var model: TaskListModel! { didSet { tableView.reloadData() } }
+    private var sortBy = "title"
+    private var isAscending = true
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -43,12 +45,42 @@ final class TaskListViewController: UIViewController {
         Router.route(to: .CreateTask, self)
     }
     
+    @IBAction private func sort(_ sender: UIBarButtonItem) {
+        
+        let handler: (UIAlertAction) -> Void = { [weak self] alertAction in
+            if let wself = self, let title = alertAction.title {
+                wself.sortBy = title == "Date" ? "dueBy" : title.lowercased()
+                
+                let handler: (UIAlertAction) -> Void = { [weak self] alertAction in
+                    if let wself = self {
+                        wself.isAscending = alertAction.title == "Ascending"
+                        wself.updateTasks()
+                    }
+                }
+                
+                let sortAlert = UIAlertController(title: "Chose Order to sort", message: nil, preferredStyle: .actionSheet)
+                sortAlert.addAction(UIAlertAction(title: "Ascending", style: .default, handler: handler))
+                sortAlert.addAction(UIAlertAction(title: "Descending", style: .default, handler: handler))
+                
+                wself.present(sortAlert, animated: true)
+            }
+        }
+        
+        let sortAlert = UIAlertController(title: "Chose Property to sort by", message: nil, preferredStyle: .actionSheet)
+        sortAlert.addAction(UIAlertAction(title: "Title", style: .default, handler: handler))
+        sortAlert.addAction(UIAlertAction(title: "Date", style: .default, handler: handler))
+        sortAlert.addAction(UIAlertAction(title: "Priority", style: .default, handler: handler))
+        sortAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(sortAlert, animated: true)
+    }
+    
     @objc private func updateTasks() {
         if !APIManager.hasToken {
             Router.route(to: .Authorization)
         } else {
-            let parameters = ["page": 1.description,
-                              "sort": "title asc"]
+            let parameters = ["page": (model?.meta.current ?? 1).description,
+                              "sort": "\(sortBy) \(isAscending ? "asc" : "desc")"]
             refreshControl.beginRefreshing()
             APIManager.shared.getTasks(with: parameters, { [weak self] taskListModel in
                 self?.model = taskListModel
