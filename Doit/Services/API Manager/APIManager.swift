@@ -57,7 +57,7 @@ class APIManager {
     }
     
     public func createTask(with parameters: [String: String], _ success: SuccessCompletion? = nil, _ error: ErrorCompletion? = nil) {
-        perform(.POST, to: baseTaskURL, with: parameters, Bool.self, { _ in success?() }, error)
+        perform(.POST, to: baseTaskURL, with: parameters, TaskModel.self, { _ in success?() }, error)
     }
 
     public func login(with credentials: Credentials, _ success: SuccessCompletion? = nil, _ error: ErrorCompletion? = nil) {

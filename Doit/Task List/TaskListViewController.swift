@@ -13,6 +13,7 @@ final class TaskListViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    private let refreshControl = UIRefreshControl()
     private var cellModels: [TaskModel] { return model?.tasks ?? [] }
     private var model: TaskListModel! { didSet { tableView.reloadData() } }
     
@@ -29,6 +30,8 @@ final class TaskListViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 9001 // Kame-Kame-Ha!
         tableView.tableFooterView = UIView()
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(updateTasks), for: .valueChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,14 +43,16 @@ final class TaskListViewController: UIViewController {
         Router.route(to: .CreateTask, self)
     }
     
-    private func updateTasks() {
+    @objc private func updateTasks() {
         if !APIManager.hasToken {
             Router.route(to: .Authorization)
         } else {
             let parameters = ["page": 1.description,
                               "sort": "title asc"]
+            refreshControl.beginRefreshing()
             APIManager.shared.getTasks(with: parameters, { [weak self] taskListModel in
                 self?.model = taskListModel
+                self?.refreshControl.endRefreshing()
             })
         }
     }
@@ -79,6 +84,7 @@ extension TaskListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete, let model = cellModels[safe: indexPath.row] {
+            refreshControl.beginRefreshing()
             APIManager.shared.delete(model, { [weak self] in
                 self?.updateTasks()
             })
