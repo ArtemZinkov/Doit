@@ -56,6 +56,7 @@ final class EditTaskViewController: UIViewController {
         
         titleTextView.text = model?.title
         descriptionTextView.text = model?.description
+        selectedPriority = model?.priority
         if let dueBy = model?.dueBy {
             dateTextField.text = EditTaskViewController.dateFormatter.string(from: Date(timeIntervalSince1970: dueBy))
         }
